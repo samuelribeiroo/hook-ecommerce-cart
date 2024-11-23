@@ -1,9 +1,9 @@
 import type { LucideIcon } from 'lucide-react'
 import type React from 'react'
 
-export interface ProductProps {
+export interface ProductCardProps {
   name: string
-  rating: number | null
+  ratingRange: number | null
   price: number
   imageSrc: string
 }
