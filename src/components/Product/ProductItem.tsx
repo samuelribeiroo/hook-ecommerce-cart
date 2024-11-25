@@ -1,14 +1,10 @@
-import { Star, ShoppingCart } from "lucide-react";
-import Button from "../ui/buttons";
-import type { ProductCardProps } from "../../@types";
+import { Star, ShoppingCart } from "lucide-react"
+import Button from "../ui/buttons"
+import type { ProductCardProps } from "../../@types"
 
-export default function ProductCard({
-  name,
-  ratingRange,
-  price,
-  imageSrc,
-  selectedCoin,
-}: ProductCardProps) {
+export default function ProductCard({ data }: ProductCardProps) {
+  const { ratingRange, imageSrc, name, price, selectedCoin } = data
+
   return (
     <div className="w-sm-full max-w-[360px] rounded-lg overflow-hidden bg-white dark:[#1A1A1E] transition-colors duration-200 mx-auto sm:max-w-[480px] md:max-w-[600px]">
       <div className="relative h-[240px] w-full sm:h-[300px] md:h-[360px]">
@@ -56,5 +52,5 @@ export default function ProductCard({
         </div>
       </div>
     </div>
-  );
+  )
 }
