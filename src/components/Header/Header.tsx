@@ -6,6 +6,7 @@ import SneakerShopLogo from "../../assets/logo.svg"
 import { useContext, type ImgHTMLAttributes } from "react"
 import { CartContext } from "../../contexts/CartContext"
 import { isRenderOutsideContextError } from "../../errors/component-context-error"
+import { Link } from "react-router-dom";
 
 
 export function Header({ selectedCoin, setSelectedCoin }: HeaderProps) {
@@ -35,12 +36,14 @@ export function Header({ selectedCoin, setSelectedCoin }: HeaderProps) {
 					aria-label="Logo"
 				/>
 				<div className="flex items-center space-x-4">
+				  <Link to={'/cart'}>
 					<Button variant="ghost" size="icon">
 						<span className="flex inline-flex items-center gap-2">
 							<ShoppingCart color="#d1d5db" className="h-5 w-5" />
 							<p className="text-red-50">{state.products.length}</p>
 						</span>
 					</Button>
+					</Link>
 					<Button variant="ghost" size="icon">
 						<Sun
 							color="#d1d5db"
