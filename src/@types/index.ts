@@ -67,7 +67,7 @@ export interface CartState {
   products: Product[];
 }
 
-export type CartAction = | { type: "ADD_CART"; payload: Product } | { type: 'REMOVE_FROM_CART'; payload: Product }
+export type CartAction = | { type: "ADD_CART"; payload: Product } | { type: 'REMOVE_FROM_CART'; payload: Product } | { type: 'INCREASE_QUANTITY'; payload: Product } | { type: "DECREASE_QUANTITY"; payload: Product }
 
 export interface CartContextProps {
   state: {
