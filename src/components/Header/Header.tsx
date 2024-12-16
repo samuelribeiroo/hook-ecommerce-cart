@@ -6,7 +6,7 @@ import SneakerShopLogo from "../../assets/logo.svg"
 import { useContext, type ImgHTMLAttributes } from "react"
 import { CartContext } from "../../contexts/CartContext"
 import { isRenderOutsideContextError } from "../../errors/component-context-error"
-import { Link } from "react-router-dom";
+import { Link } from "react-router-dom"
 
 
 export function Header({ selectedCoin, setSelectedCoin }: HeaderProps) {

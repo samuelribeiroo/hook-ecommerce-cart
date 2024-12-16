@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import { useState } from "react"
 import type { Currency, ProductCardProps } from "../../@types"
 import { currencies, products } from "../../constants/data"
 import ProductCart from "./ProductItem"
