@@ -10,7 +10,7 @@ import type { CurrencyDropdownProps } from "../../@types"
 // biome-ignore lint/suspicious/noRedeclare: <explanation>
 export default function CurrencyDropdown({ selectedCurrency, setSelectedCurrency }: CurrencyDropdownProps) {
 	// biome-ignore lint/suspicious/noExplicitAny: <explanation>
-	const handleSelect = currency => {
+	const handleSelect = (currency: any) => {
 		setSelectedCurrency(currency)
 	}
 

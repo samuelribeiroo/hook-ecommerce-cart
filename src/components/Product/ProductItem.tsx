@@ -1,20 +1,20 @@
 import { Star, ShoppingCart } from "lucide-react"
 import Button from "../ui/buttons"
-import type { ProductCardProps, Product } from "../../@types"
-import { useContext, useState } from "react"
+import type { ProductCardProps } from "../../@types"
+import { useState } from "react"
 import * as ToastPrimitive from "@radix-ui/react-toast"
 import { X } from "lucide-react"
-// import { CartContext } from "../../contexts/CartContext"
+
 import clsx from "clsx"
-import { CartContext, useCart } from "../../contexts/CartContext"
-import { isRenderOutsideContextError } from "../../errors/component-context-error"
+import {  useCart } from "../../contexts/CartContext"
+
 
 // biome-ignore lint/suspicious/noRedeclare: <explanation>
 // biome-ignore lint/suspicious/noDuplicateParameters: <explanation>
 export default function ProductCard({ data, properties, selectedCoin }: ProductCardProps) {
   const [isToastOpen, setIsToastOpen] = useState(false)
   const [message, setMessage] = useState("")
-  const [type, setType] = useState<"success" | "error" | "info">("success")
+  const [, setType] = useState<"success" | "error" | "info">("success")
 
   const { dispatch } = useCart()
 
